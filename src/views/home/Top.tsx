@@ -29,11 +29,12 @@ export const Top = () => {
           Hola! I'm <Highlight>Anthony.</Highlight>
         </TopTitle>
         <Paragraph>
-          I'm a <b>Web Developer</b> from Bogotá, Colombia, or how they like to
-          call us back home: Un Rolo. I'm a recent joiner to the <b>React </b>
+          I'm a <b>Web Developer</b> with great interest in Bitcoin currently
+          living in Germany. I'm from Bogotá, Colombia, or how they like to call
+          us back home: Un Rolo. I'm a recent joiner to the <b>React </b>
           community with 3 years as a professional React developer, and have
           loved it ever since. I'm currently living in the beautifull city of
-          Munich, Germany, and work as a frontend dev at an e-commerce.
+          Munich and work as a frontend dev at an e-commerce.
         </Paragraph>
         <Paragraph>
           Apart from my full-time job, my focus is towards developing

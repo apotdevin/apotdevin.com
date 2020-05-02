@@ -25,7 +25,7 @@ export default function Index({ allPosts }) {
   return (
     <div>
       <Head>
-        <title>AP - React Dev</title>
+        <title>AP - Web Dev and Bitcoin Enthusiast</title>
       </Head>
       <PageWrapper>
         <HeaderBodyWrapper>
