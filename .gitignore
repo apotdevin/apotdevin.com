@@ -1,0 +1,5 @@
+.env
+.now
+
+/.next
+/node_modules
