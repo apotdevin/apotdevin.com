@@ -31,7 +31,7 @@ const TechCardBox = styled.div`
   max-width: 720px;
 `;
 
-const TechCards = styled.a`
+export const TechCards = styled.a`
   cursor: pointer;
   border-radius: 4px;
   text-decoration: none;

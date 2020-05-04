@@ -2,19 +2,12 @@ import * as React from 'react';
 import fetch from 'isomorphic-unfetch';
 import { useQuery } from 'react-query';
 import styled from 'styled-components';
+import { TechCards } from '../../views/home/Tech';
 
 const BitcoinRow = styled.div`
   display: flex;
   justify-content: center;
   margin: 40px 0;
-`;
-
-const BitcoinButton = styled.div`
-  padding: 8px 16px;
-  background-color: #ffd300;
-  color: black;
-  border-radius: 32px;
-  font-weight: 500;
 `;
 
 export const Bitcoin = () => {
@@ -27,7 +20,7 @@ export const Bitcoin = () => {
   if (status === 'loading') {
     return (
       <BitcoinRow>
-        <BitcoinButton>{'Bitcoin'}</BitcoinButton>
+        <TechCards href={'https://bitcoin.org/'}>{'Bitcoin'}</TechCards>
       </BitcoinRow>
     );
   }
@@ -40,7 +33,9 @@ export const Bitcoin = () => {
     const price = data.EUR.last;
     return (
       <BitcoinRow>
-        <BitcoinButton>{`Bitcoin: €${price}`}</BitcoinButton>
+        <TechCards
+          href={'https://bitcoin.org/'}
+        >{`Bitcoin: €${price}`}</TechCards>
       </BitcoinRow>
     );
   }
