@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { Section } from '../section';
-import { headerBackColor, headerTextColor } from '../../styles/ThemeColors';
+import {
+  headerBackColor,
+  headerTextColor,
+  mediaWidths,
+} from '../../styles/ThemeColors';
 import styled from 'styled-components';
 import { Emoji } from '../emoji';
 import { GitHub } from 'react-feather';
@@ -9,11 +13,19 @@ import { StyledLink } from '../link';
 const FooterStyle = styled.div`
   padding: 32px;
   min-height: 160px;
+
+  @media (${mediaWidths.mobile}) {
+    min-height: 320px;
+  }
 `;
 
 const FooterRow = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (${mediaWidths.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const FooterWrapper = styled.div`
@@ -25,12 +37,25 @@ const FooterWrapper = styled.div`
 const FooterText = styled.div`
   max-width: 400px;
   line-height: 150%;
+  margin-right: 32px;
+
+  @media (${mediaWidths.mobile}) {
+    margin-right: 0;
+    text-align: center;
+    padding-bottom: 16px;
+    max-width: 100%;
+  }
 `;
 
 const FooterTextRight = styled.div`
   text-align: right;
   max-width: 400px;
   line-height: 150%;
+
+  @media (${mediaWidths.mobile}) {
+    text-align: center;
+    max-width: 100%;
+  }
 `;
 
 const IconPadding = styled.span`

@@ -14,6 +14,10 @@ const ProjectsStyled = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 48px 0 60px;
+
+  @media (${mediaWidths.mobile}) {
+    margin-bottom: 32px;
+  }
 `;
 
 const ProjectsRow = styled.div`

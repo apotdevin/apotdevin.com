@@ -3,11 +3,16 @@ import fetch from 'isomorphic-unfetch';
 import { useQuery } from 'react-query';
 import styled from 'styled-components';
 import { TechCards } from '../../views/home/Tech';
+import { mediaWidths } from '../../styles/ThemeColors';
 
 const BitcoinRow = styled.div`
   display: flex;
   justify-content: center;
   margin: 40px 0;
+
+  @media (${mediaWidths.mobile}) {
+    margin: 0 0 32px;
+  }
 `;
 
 export const Bitcoin = () => {

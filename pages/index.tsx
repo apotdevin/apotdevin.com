@@ -7,6 +7,7 @@ import { Projects } from '../src/views/home/Projects';
 import { Tech } from '../src/views/home/Tech';
 import { Contact } from '../src/views/home/Contact';
 import { Bitcoin } from '../src/components/bitcoin';
+import { mediaWidths } from '../src/styles/ThemeColors';
 // import { getAllPosts } from '../lib/api';
 
 export const PageWrapper = styled.div`
@@ -16,6 +17,10 @@ export const PageWrapper = styled.div`
 
 export const HeaderBodyWrapper = styled.div`
   padding-bottom: 160px;
+
+  @media (${mediaWidths.mobile}) {
+    padding-bottom: 320px;
+  }
 `;
 
 export default function Index({ allPosts }) {
