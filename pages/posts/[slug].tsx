@@ -4,14 +4,20 @@ import { getPostBySlug, getAllPosts } from '../../lib/api';
 // import Head from 'next/head';
 // import { CMS_NAME } from '../../lib/constants';
 import markdownToHtml from '../../lib/markdownToHtml';
+import ReactMarkdown from 'react-markdown';
+import { CodeBlock } from '../../src/components/codeBlock';
+import { Section } from '../../src/components/section';
 
 export default function Post({ post, morePosts, preview }) {
+  console.log({ post, morePosts, preview });
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div>{post.content}</div>
+    <Section>
+      <ReactMarkdown source={post.content} renderers={{ code: CodeBlock }} />
+    </Section>
     // <Layout preview={preview}>
     //   <Container>
     //     <Header />
