@@ -10,14 +10,18 @@ type WrapperProps = {
   textColor?: string | ThemeSet;
 };
 
+type SectionProps = {
+  sectionWidth?: string;
+};
+
 const SectionWrapper = styled.div<WrapperProps>`
   width: 100%;
   background: ${({ backColor }) => backColor || backgroundColor};
   color: ${({ textColor }) => textColor || themeTextColor};
 `;
 
-const StyledSection = styled.div`
-  max-width: 900px;
+const StyledSection = styled.div<SectionProps>`
+  max-width: ${({ sectionWidth }) => sectionWidth || '900px'};
   margin: 0 auto 0 auto;
 
   @media (max-width: 1035px) {
@@ -25,10 +29,14 @@ const StyledSection = styled.div`
   }
 `;
 
-export const Section: React.FC<WrapperProps> = ({ children, ...props }) => {
+export const Section: React.FC<WrapperProps & SectionProps> = ({
+  children,
+  sectionWidth,
+  ...props
+}) => {
   return (
     <SectionWrapper {...props}>
-      <StyledSection>{children}</StyledSection>
+      <StyledSection sectionWidth={sectionWidth}>{children}</StyledSection>
     </SectionWrapper>
   );
 };

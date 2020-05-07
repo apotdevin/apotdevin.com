@@ -44,14 +44,12 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
             sizes="16x16"
           />
-
           <link
-            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap"
-            as="style"
+            rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
           />
         </Head>
