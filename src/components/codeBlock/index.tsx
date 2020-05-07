@@ -1,6 +1,6 @@
 import * as React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Prism } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 type CodeBlockProps = {
   value: string;
@@ -9,8 +9,11 @@ type CodeBlockProps = {
 
 export const CodeBlock = ({ value, language }: CodeBlockProps) => {
   return (
-    <SyntaxHighlighter language={'javascript'} style={darcula}>
-      {value}
-    </SyntaxHighlighter>
+    <Prism
+      style={okaidia}
+      language={language}
+      showLineNumbers={false}
+      children={value}
+    />
   );
 };

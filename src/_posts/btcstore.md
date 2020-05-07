@@ -36,7 +36,7 @@ After all these general settings we can now create the actual store, so go to Ap
 
 The app will default to a Tea store so we have to change some fields. Change the name and deselect the “User can input custom amount” checkbox. Then replace the Template text with the following:
 
-```javascript
+```
 bitcoin socks:
   price: 10
   title: Bitcoin Socks

@@ -3,7 +3,6 @@ import ErrorPage from 'next/error';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
 // import Head from 'next/head';
 // import { CMS_NAME } from '../../lib/constants';
-import markdownToHtml from '../../lib/markdownToHtml';
 import ReactMarkdown from 'react-markdown';
 import { CodeBlock } from '../../src/components/codeBlock';
 import { Section } from '../../src/components/section';
@@ -57,13 +56,11 @@ export async function getStaticProps({ params }) {
     'ogImage',
     'coverImage',
   ]);
-  const content = await markdownToHtml(post.content || '');
 
   return {
     props: {
       post: {
         ...post,
-        content,
       },
     },
   };
