@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import sortBy from 'lodash.sortby';
 
 const postsDirectory = join(process.cwd(), 'src/_posts');
 
@@ -35,5 +36,12 @@ export function getPostBySlug(slug, fields = []) {
 
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
-  return slugs.map(slug => getPostBySlug(slug, fields));
+
+  const allPosts = slugs
+    .map(slug => getPostBySlug(slug, fields))
+    .filter(p => !p.isDraft);
+
+  const sorted = sortBy(allPosts, post => new Date(post.date)).reverse();
+
+  return sorted;
 }

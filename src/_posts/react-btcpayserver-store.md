@@ -3,6 +3,7 @@ title: 'Using React and BTCPayServer to receive Bitcoin Payments'
 excerpt: 'Create a simple store front using ReactJS and integrate with BTCPayServer to be able to recieve Bitcoin and Lightning Payments.'
 coverImage: '/assets/blog/btcstore/cover.png'
 date: '2019-01-05T05:35:07.322Z'
+isDraft: false
 ---
 
 Cruising through twitter, I started to see different accounts that offered products/services for bitcoin; got curious of how they where processing these payments. Was it manual? Or did they have some sort of automation to easily handle this?

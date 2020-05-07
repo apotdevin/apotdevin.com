@@ -3,6 +3,7 @@ title: 'Lightning Network Channel Balancing with ThunderHub'
 excerpt: 'How to use ThunderHub to do circular rebalancing of your Lightning Network Channels.'
 coverImage: '/assets/blog/thunderhub-balancing/cover.png'
 date: '2020-02-23T05:35:07.322Z'
+isDraft: false
 ---
 
 With LND v0.9.0-beta being released around a month ago, we saw some great features being released such as multi-path payments and keysend, features highly awaited by me and many more lightning network fanatics. Within this release, there was also a smaller feature that caught my eye which was the added support for circular payments to yourself. This meant that you could now rebalance your channels directly with LND without the need of additional scripts.

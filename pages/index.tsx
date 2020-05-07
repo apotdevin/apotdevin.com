@@ -10,6 +10,8 @@ export default function Index({ allPosts }) {
   // const heroPost = allPosts[0];
   // const morePosts = allPosts.slice(1);
 
+  // console.log({ heroPost, morePosts });
+
   return (
     <>
       <Head>
@@ -32,6 +34,7 @@ export async function getStaticProps() {
     'author',
     'coverImage',
     'excerpt',
+    'isDraft',
   ]);
 
   return {
