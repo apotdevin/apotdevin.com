@@ -24,7 +24,7 @@ export default function Post({ post, morePosts, preview }) {
         <title>{post.title}</title>
       </Head>
       <Spacer mobileAmount={'60px'} />
-      <Section sectionWidth={'700px'}>
+      <Section sectionWidth={'600px'}>
         <PostTitle>{post.title}</PostTitle>
         <PostDate>{post.date}</PostDate>
         <BlogImage src={post.coverImage} />

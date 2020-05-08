@@ -105,7 +105,7 @@ These are the tools that we will be using:
 
 So first off, create your app and install the dependencies that we will use.
 
-```
+```bash
 create-react-app app
 cd app
 npm install -s react-router-dom antd
@@ -345,12 +345,20 @@ Finally we will join BTCPayServer to the React frontend we have just built. So h
 
 Below the “Template” field you will see a section called “Host Button Externally” and a form that should look like this:
 
-```Javascript
-<form method="POST" action=[YOUR_OWN_URL]>
+```html
+<form method="POST" action="[YOUR_OWN_URL]">
   <input type="hidden" name="email" value="customer@example.com" />
   <input type="hidden" name="orderId" value="CustomOrderId" />
-  <input type="hidden" name="notificationUrl" value="https://example.com/callbacks" />
-  <input type="hidden" name="redirectUrl" value="https://example.com/thanksyou" />
+  <input
+    type="hidden"
+    name="notificationUrl"
+    value="https://example.com/callbacks"
+  />
+  <input
+    type="hidden"
+    name="redirectUrl"
+    value="https://example.com/thanksyou"
+  />
   <button type="submit" name="choiceKey" value="bitcoin">Buy now</button>
 </form>
 ```
