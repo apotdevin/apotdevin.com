@@ -6,22 +6,13 @@ import {
   SectionTitle,
   SmallHighlight,
 } from '../../components/typography';
-import {
-  contactCardColor,
-  textColor,
-  mediaWidths,
-} from '../../styles/ThemeColors';
+import { contactCardColor, textColor } from '../../styles/ThemeColors';
 import { Twitter, Send, GitHub } from 'react-feather';
 
 const ContactStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 48px 0 60px;
-
-  @media (${mediaWidths.mobile}) {
-    margin: 0 0 40px;
-  }
 `;
 
 const ContactCardBox = styled.div`

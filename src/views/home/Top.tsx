@@ -3,7 +3,7 @@ import { Section } from '../../components/section';
 import styled from 'styled-components';
 import { Emoji } from '../../components/emoji';
 import { Paragraph, Highlight } from '../../components/typography';
-import { mediaWidths } from '../../styles/ThemeColors';
+import { Spacer } from '../../components/spacer';
 
 const TopStyle = styled.div`
   display: flex;
@@ -14,11 +14,6 @@ const TopStyle = styled.div`
 const TopTitle = styled.div`
   font-size: 32px;
   font-weight: 800;
-  margin: 140px 0 80px;
-
-  @media (${mediaWidths.mobile}) {
-    margin: 100px 0 60px;
-  }
 `;
 
 export const Top = () => {
@@ -28,6 +23,7 @@ export const Top = () => {
         <TopTitle>
           Hola! I'm <Highlight>Anthony.</Highlight>
         </TopTitle>
+        <Spacer />
         <Paragraph>
           I'm a <b>Web Developer</b> with great interest in Bitcoin currently
           living in Germany. I'm from Bogotá, Colombia, or how they like to call

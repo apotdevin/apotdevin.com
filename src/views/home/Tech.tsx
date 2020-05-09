@@ -6,21 +6,12 @@ import {
   SectionTitle,
   SmallHighlight,
 } from '../../components/typography';
-import {
-  techCardHoverColor,
-  techCardColor,
-  mediaWidths,
-} from '../../styles/ThemeColors';
+import { techCardHoverColor, techCardColor } from '../../styles/ThemeColors';
 
 const TechStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 48px 0 60px;
-
-  @media (${mediaWidths.mobile}) {
-    margin: 16px 0;
-  }
 `;
 
 const TechCardBox = styled.div`
