@@ -81,7 +81,7 @@ And that’s it! If you go to your domain you should now see the awesome BTCPay 
 If you already have a BTCPay server running somewhere and just want to add ThunderHub it’s even easier! Two lines of code to copy and it should be up and running. First SSH into your server and paste these two lines:
 
 ```bash
-export BTCPAYGEN_ADDITIONAL_FRAGMENTS="\$BTCPAYGEN_ADDITIONAL_FRAGMENTS;opt-add-thunderhub"
+export BTCPAYGEN_ADDITIONAL_FRAGMENTS="$BTCPAYGEN_ADDITIONAL_FRAGMENTS;opt-add-thunderhub"
 
 . btcpay-setup.sh -i
 ```
