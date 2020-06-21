@@ -74,7 +74,7 @@ export const BlogContact = () => {
       <BlogFooter>
         <ProfilePicture
           alt={'Profile Picture'}
-          src={'/assets/home/Profile.jpg'}
+          src={'/assets/home/Profile.png'}
         />
         <BlogFooterSide>
           <SingleLine>
