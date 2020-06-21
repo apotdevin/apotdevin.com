@@ -4,6 +4,7 @@ import { headerBackColor, headerTextColor } from '../../styles/ThemeColors';
 import styled from 'styled-components';
 import { Sun, Moon } from 'react-feather';
 import { useSettingsState, useSettingsDispatch } from '../../context/Settings';
+import Link from 'next/link';
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -27,6 +28,11 @@ const HeaderTitle = styled.div`
   font-weight: 700;
 `;
 
+const HeaderLink = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+`;
+
 export const Header = () => {
   const { theme } = useSettingsState();
   const dispatch = useSettingsDispatch();
@@ -42,7 +48,11 @@ export const Header = () => {
     <StyledHeader>
       <Section backColor={headerBackColor} textColor={headerTextColor}>
         <HeaderLine>
-          <HeaderTitle>APOTDEVIN</HeaderTitle>
+          <Link href={'/'}>
+            <HeaderLink>
+              <HeaderTitle>APOTDEVIN</HeaderTitle>
+            </HeaderLink>
+          </Link>
           {theme === 'light' ? (
             <HeaderIcon
               onClick={() => dispatch({ type: 'changeTheme', theme: 'dark' })}

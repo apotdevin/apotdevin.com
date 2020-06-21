@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { linkTextColor, linkHoverColor } from '../../styles/ThemeColors';
 
 const LinkStyled = styled.a`
+  cursor: pointer;
   text-decoration: none;
   font-weight: 500;
   color: ${linkTextColor};
