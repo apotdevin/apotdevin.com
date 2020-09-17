@@ -94,33 +94,34 @@ After you have everything up and running you can now access ThunderHub by going 
 
 ![BTCPay Services](/assets/blog/thunderhub-btcpay/2.png)
 
-You can also go directly by going to the following URL: YOURBTCPAYDOMAIN.com/thub
+After clicking on **See Information** you will arrive at this view where you can then press on **"clicking here"** to be redirected to you ThunderHub instance.
+
+![ThunderHub Information](/assets/blog/thunderhub-btcpay/3.png)
 
 ## Connect ThunderHub to BTCPay
 
-To connect ThunderHub to your BTCPay node you just need one copy/paste.
+ThunderHub is already connected and secured with JSON web tokens and BTCPay's login system so once you arrive at the page you just need to click on **Connect** to access your dashboard.
 
-In Server Settings and Services:
+![ThunderHub Connect](/assets/blog/thunderhub-btcpay/4.png)
 
-1. Go into the gRPC server information
-2. Click on Show QR Code
-3. Click on the See the QR Code information button below the QR code
-4. Click to open the configuration file
-5. Copy the complete contents of the page that opens
+## There's an Error!
 
-In ThunderHub:
+If you get a warning message that says **"Unable to connect to node"** it is probably because the certificate used to communicate with LND doesn't have the correct domains. LND doesn't generate new ones unless the previous ones are deleted first.
 
-1. Select to connect with BTCPayServer
-2. Paste what you previously copied
-3. And connect!
+To delete the old certificate and key and have LND generate new ones, apply the following:
 
-![ThunderHub Connect](/assets/blog/thunderhub-btcpay/3.png)
+```bash
+docker exec btcpayserver_lnd_bitcoin rm /data/tls.cert
+docker exec btcpayserver_lnd_bitcoin rm /data/tls.key
+docker restart btcpayserver_lnd_bitcoin
+docker restart generated_bitcoin_thub_1
+```
+
+This is not dangerous for your node. These certificates are only used to encrypt the gRPC connection.
 
 ## The End
 
 You now have a fully working Bitcoin and Lightning node with a great UI to manage and monitor them at anytime and from anywhere.
 Hope this helped you get setup and running.
 
-If you have any questions or suggestions feel free to hit me up on twitter at @tonyioi
-
-Until next time!
+**If you have any questions or suggestions feel free to hit me up on twitter at @tonyioi**
