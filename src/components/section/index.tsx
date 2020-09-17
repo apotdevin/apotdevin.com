@@ -21,7 +21,7 @@ const SectionWrapper = styled.div<WrapperProps>`
 `;
 
 const StyledSection = styled.div<SectionProps>`
-  max-width: ${({ sectionWidth }) => sectionWidth || '900px'};
+  max-width: ${({ sectionWidth }) => sectionWidth || '800px'};
   margin: 0 auto 0 auto;
 
   @media (max-width: 1035px) {

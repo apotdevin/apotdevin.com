@@ -39,29 +39,33 @@ const StyledImage = styled.img`
 
 export const Projects = () => {
   return (
-    <Section>
+    <Section sectionWidth={'800px'}>
       <ProjectsStyled>
         <SectionTitle>
           <SmallHighlight>Projects</SmallHighlight>
         </SectionTitle>
         <ProjectsRow>
-          <Paragraph>
-            Currently my main project is
-            <StyledLink href={'https://thunderhub.io'}>
-              {' '}
-              ThunderHub
-            </StyledLink>{' '}
-            an open-source Lightning Network{' '}
-            <StyledLink href={'https://github.com/lightningnetwork/lnd'}>
-              LND
-            </StyledLink>{' '}
-            node manager. The project is based on <b>React</b>, <b>NextJS</b>{' '}
-            and <b>GraphQL</b> and gives you an interface to manage your
-            bitcoin/lightning accounts.
-            <b> Bitcoin </b> gives you a Swiss bank account in your pocket and
-            the Lightning Network gives you instant transactions. ThunderHub
-            gives you a great UI to manage them both.
-          </Paragraph>
+          <div>
+            <Paragraph>
+              Currently my main project is
+              <StyledLink href={'https://thunderhub.io'}>
+                {' '}
+                ThunderHub
+              </StyledLink>{' '}
+              an open-source Lightning Network{' '}
+              <StyledLink href={'https://github.com/lightningnetwork/lnd'}>
+                LND
+              </StyledLink>{' '}
+              node manager. The project is based on <b>React</b>, <b>NextJS</b>{' '}
+              and <b>GraphQL</b> and gives you an interface to manage your
+              bitcoin/lightning accounts.
+            </Paragraph>
+            <Paragraph>
+              <b> Bitcoin </b> gives you a Swiss bank account in your pocket and
+              the Lightning Network gives you instant transactions. ThunderHub
+              gives you a great UI to manage them both.
+            </Paragraph>
+          </div>
           <StyledImage src={'/assets/home/ThunderHub.png'} />
         </ProjectsRow>
       </ProjectsStyled>

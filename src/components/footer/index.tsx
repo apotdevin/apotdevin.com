@@ -11,10 +11,11 @@ import { GitHub } from 'react-feather';
 import { StyledLink } from '../link';
 
 const FooterStyle = styled.div`
-  padding: 32px;
+  padding: 32px 0;
   min-height: 160px;
 
   @media (${mediaWidths.mobile}) {
+    padding: 32px;
     min-height: 320px;
   }
 `;

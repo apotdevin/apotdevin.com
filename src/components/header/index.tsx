@@ -50,7 +50,7 @@ export const Header = () => {
         <HeaderLine>
           <Link href={'/'}>
             <HeaderLink>
-              <HeaderTitle>APOTDEVIN</HeaderTitle>
+              <HeaderTitle>AP</HeaderTitle>
             </HeaderLink>
           </Link>
           {theme === 'light' ? (

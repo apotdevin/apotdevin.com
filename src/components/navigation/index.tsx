@@ -54,7 +54,7 @@ const NavigationPadding = styled.div`
 export const Navigation = ({ previous, next }: NavigationProps) => {
   return (
     <NavigationPadding>
-      <Section sectionWidth={'750px'}>
+      <Section sectionWidth={'800px'}>
         <NavigationRow>
           {previous.title ? (
             <Link href={`/blog/${previous.slug}`}>

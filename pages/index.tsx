@@ -17,13 +17,13 @@ export default function Index({ allPosts }) {
       <Spacer amount={'140px'} mobileAmount={'100px'} />
       <Top />
       <Spacer amount={'80px'} mobileAmount={'60px'} />
-      <Posts posts={allPosts} />
+      <Tech />
       <Spacer />
       <Projects />
       <Spacer />
       <Bitcoin />
       <Spacer />
-      <Tech />
+      <Posts posts={allPosts} />
       <Spacer />
       <Contact />
       <Spacer />

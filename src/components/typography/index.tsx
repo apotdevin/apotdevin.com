@@ -6,7 +6,7 @@ import {
 
 export const Paragraph = styled.div`
   font-size: 18px;
-  max-width: 600px;
+  max-width: 800px;
   line-height: 150%;
   margin-top: 16px;
 `;
@@ -30,7 +30,7 @@ export const SmallHighlight = styled(Highlight)`
 
 export const SectionTitle = styled.div`
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   padding: 16px 0 8px;
   text-align: left;
   font-weight: 800;

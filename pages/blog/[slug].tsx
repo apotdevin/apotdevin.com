@@ -28,7 +28,7 @@ export default function Post({ post, previous, next }) {
       </Head>
       <Spacer mobileAmount={'60px'} />
       <Navigation previous={previous} next={next} />
-      <Section sectionWidth={'600px'}>
+      <Section sectionWidth={'800px'}>
         <PostTitle>{post.title}</PostTitle>
         <PostDate>{post.date}</PostDate>
         <BlogImage src={post.coverImage} />

@@ -78,7 +78,7 @@ export const Posts = ({ posts }: PostsProps) => {
 
   return (
     <>
-      <Section>
+      <Section sectionWidth={'1400px'}>
         <PostsStyled>
           <SectionTitle>
             <SmallHighlight>Posts</SmallHighlight>
