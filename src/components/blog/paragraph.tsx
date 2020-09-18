@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { mediaWidths } from '../../styles/ThemeColors';
 
 export const PostParagraph = styled.p`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 170%;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 32px;
 
   @media (${mediaWidths.mobile}) {

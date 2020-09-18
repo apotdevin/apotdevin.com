@@ -17,14 +17,17 @@ const HeaderLine = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  align-items: center;
+  padding: 8px;
 `;
 
 const HeaderIcon = styled.div`
   cursor: pointer;
+  margin-bottom: -6px;
 `;
 
 const HeaderTitle = styled.div`
+  font-size: 24px;
   font-weight: 700;
 `;
 
@@ -57,13 +60,13 @@ export const Header = () => {
             <HeaderIcon
               onClick={() => dispatch({ type: 'changeTheme', theme: 'dark' })}
             >
-              <Moon size={16} />
+              <Moon size={20} />
             </HeaderIcon>
           ) : (
             <HeaderIcon
               onClick={() => dispatch({ type: 'changeTheme', theme: 'light' })}
             >
-              <Sun size={16} />
+              <Sun size={20} />
             </HeaderIcon>
           )}
         </HeaderLine>

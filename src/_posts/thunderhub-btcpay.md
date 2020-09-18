@@ -15,7 +15,7 @@ To go along with this great tech stack, ThunderHub was also integrated into thei
 
 In this post we will cover the process of getting a BTCPay instance up and running from zero (on DigitalOcean) with ThunderHub integrated.
 
-**If you already have BTCPay running somewhere feel free to skip the first two parts and go directly to the “Adding ThunderHub to an existing BTCPay” section.**
+_If you already have BTCPay running somewhere feel free to skip the first two parts and go directly to the “Adding ThunderHub to an existing BTCPay” section._
 
 ## Starting a Server on DigitalOcean
 

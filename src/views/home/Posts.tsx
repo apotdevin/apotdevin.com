@@ -45,7 +45,10 @@ const PostDate = styled.div`
   margin-bottom: 16px;
 `;
 
-const PostExcerpt = styled.div``;
+const PostExcerpt = styled.div`
+  line-height: 150%;
+  font-size: 18px;
+`;
 
 type PostProps = {
   title: string;
@@ -86,7 +89,9 @@ export const Posts = ({ posts }: PostsProps) => {
         </PostsStyled>
         <StyledPosts>
           {renderPost(heroPost)}
-          {morePosts.map(post => renderPost(post))}
+          {morePosts.map((post, index) => (
+            <React.Fragment key={index}>{renderPost(post)}</React.Fragment>
+          ))}
         </StyledPosts>
       </Section>
     </>
