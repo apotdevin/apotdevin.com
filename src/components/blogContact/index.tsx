@@ -73,7 +73,7 @@ export const BlogContact = () => {
       <StyledSeparation />
       <BlogFooter>
         <ProfilePicture
-          alt={'Profile Picture'}
+          alt={'Anthony Potdevin Profile Picture'}
           src={'/assets/home/Profile.png'}
         />
         <BlogFooterSide>

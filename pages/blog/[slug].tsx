@@ -31,7 +31,7 @@ export default function Post({ post, previous, next }) {
       <Section sectionWidth={'800px'}>
         <PostTitle>{post.title}</PostTitle>
         <PostDate>{post.date}</PostDate>
-        <BlogImage src={post.coverImage} />
+        <BlogImage alt={post.title} src={post.coverImage} />
         <ReactMarkdown
           source={post.content}
           renderers={{

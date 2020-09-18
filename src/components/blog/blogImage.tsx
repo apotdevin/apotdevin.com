@@ -17,7 +17,7 @@ export const BlogImage = styled.img`
 `;
 
 type PostImageProps = {
-  alt?: string;
+  alt: string;
   src: string;
 };
 
