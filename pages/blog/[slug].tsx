@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
-import Head from 'next/head';
 import ReactMarkdown from 'react-markdown';
 import { CodeBlock } from '../../src/components/blog/codeBlock';
 import { Section } from '../../src/components/section';
@@ -12,6 +11,7 @@ import { BlogImage, PostImage } from '../../src/components/blog/blogImage';
 import { PostDate } from '../../src/components/blog/postDate';
 import { Navigation } from '../../src/components/navigation';
 import { BlogContact } from '../../src/components/blogContact';
+import { Meta } from '../../src/components/meta';
 
 export default function Post({ post, previous, next }) {
   const router = useRouter();
@@ -20,12 +20,13 @@ export default function Post({ post, previous, next }) {
   }
   return (
     <>
-      <Head>
-        <title>{post.title}</title>
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.coverImage} />
-      </Head>
+      <Meta
+        title={post.title}
+        description={post.excerpt}
+        ogTitle={post.title}
+        ogDescription={post.excerpt}
+        ogImage={post.coverImage}
+      />
       <Spacer mobileAmount={'60px'} />
       <Navigation previous={previous} next={next} />
       <Section sectionWidth={'800px'}>
