@@ -66,7 +66,10 @@ export const Projects = () => {
               gives you a great UI to manage them both.
             </Paragraph>
           </div>
-          <StyledImage src={'/assets/home/ThunderHub.png'} />
+          <StyledImage
+            alt={'ThunderHub Open Source Project'}
+            src={'/assets/home/ThunderHub.png'}
+          />
         </ProjectsRow>
       </ProjectsStyled>
     </Section>

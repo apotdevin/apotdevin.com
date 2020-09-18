@@ -28,7 +28,8 @@ export const SmallHighlight = styled(Highlight)`
   padding: 0 6px;
 `;
 
-export const SectionTitle = styled.div`
+export const SectionTitle = styled.h2`
+  margin: 0;
   width: 100%;
   max-width: 800px;
   padding: 16px 0 8px;

@@ -68,7 +68,7 @@ export const Posts = ({ posts }: PostsProps) => {
   const renderPost = (post: PostProps) => (
     <Link href={`/blog/${post.slug}`}>
       <StyledPost>
-        <PostImage src={post.coverImage} />
+        <PostImage alt={post.title} src={post.coverImage} />
         <PostTitle>{post.title}</PostTitle>
         <PostDate>{format(new Date(post.date), 'MMMM dd, yyyy')}</PostDate>
         <PostExcerpt>{post.excerpt}</PostExcerpt>

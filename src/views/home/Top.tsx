@@ -11,9 +11,10 @@ const TopStyle = styled.div`
   align-items: center;
 `;
 
-const TopTitle = styled.div`
+const TopTitle = styled.h1`
   font-size: 32px;
   font-weight: 800;
+  margin: 0;
 `;
 
 export const Top = () => {
