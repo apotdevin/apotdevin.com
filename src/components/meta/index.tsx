@@ -36,6 +36,7 @@ export const Meta: React.FC<MetaProps> = ({
       <meta name="twitter:image" content={`${WEBSITE_URL}${ogImage}`} />
       <meta name="twitter:site" content="@tonyioi" />
       <meta name="twitter:creator" content="@tonyioi" />
+      <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );
 };
