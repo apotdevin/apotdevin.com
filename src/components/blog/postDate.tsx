@@ -2,15 +2,33 @@ import styled from 'styled-components';
 import { format } from 'date-fns';
 import { themeColors, fontColors } from '../../styles/ThemeColors';
 
-export const StyledDate = styled.div`
+type StyledProps = {
+  bottomMargin?: string;
+};
+
+export const StyledDate = styled.div<StyledProps>`
   font-weight: 500;
-  margin-bottom: 32px;
+  margin-bottom: ${({ bottomMargin }) => bottomMargin || '32px'};
 `;
 
-export const PostDate: React.FC = ({ children }) => {
-  if (typeof children !== 'string') {
+type PostDateType = {
+  date: string;
+  text?: string;
+  bottomMargin?: string;
+};
+
+export const PostDate: React.FC<PostDateType> = ({
+  text = '',
+  date,
+  bottomMargin,
+}) => {
+  if (typeof date !== 'string') {
     return null;
   }
-  const formattedDate = format(new Date(children), 'MMMM dd, yyyy');
-  return <StyledDate>{formattedDate}</StyledDate>;
+  const formattedDate = format(new Date(date), 'MMMM dd, yyyy');
+  return (
+    <StyledDate
+      bottomMargin={bottomMargin}
+    >{`${text}${formattedDate}`}</StyledDate>
+  );
 };

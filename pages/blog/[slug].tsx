@@ -31,7 +31,11 @@ export default function Post({ post, previous, next }) {
       <Navigation previous={previous} next={next} />
       <Section sectionWidth={'800px'}>
         <PostTitle>{post.title}</PostTitle>
-        <PostDate>{post.date}</PostDate>
+        <PostDate
+          date={post.date}
+          bottomMargin={post.update ? '4px' : undefined}
+        />
+        {post.update && <PostDate date={post.update} text={'Updated: '} />}
         <BlogImage alt={post.title} src={post.coverImage} />
         <ReactMarkdown
           source={post.content}
@@ -58,6 +62,7 @@ export async function getStaticProps({ params }) {
     'ogImage',
     'coverImage',
     'excerpt',
+    'update',
   ]);
 
   const posts = getAllPosts(['slug', 'title']);

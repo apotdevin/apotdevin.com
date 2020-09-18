@@ -3,6 +3,7 @@ title: 'Setting up BTCPay with ThunderHub in 5 minutes'
 excerpt: 'BTCPay is one of the easiest ways to get your own Bitcoin and Lightning node running. Now with the ThunderHub integration you can quickly manage your nodes with a great UX.'
 coverImage: '/assets/blog/thunderhub-btcpay/cover.png'
 date: '2020-04-26T05:35:07.322Z'
+update: '2020-09-18T05:35:07.322Z'
 isDraft: false
 ---
 
@@ -89,6 +90,8 @@ export BTCPAYGEN_ADDITIONAL_FRAGMENTS="$BTCPAYGEN_ADDITIONAL_FRAGMENTS;opt-add-t
 And that’s it! After the setup finishes you can now access ThunderHub.
 
 ## Access ThunderHub
+
+_If it's a new instance you will have to wait for the blockchain to sync. Depending on which sync method you chose you will have to wait between a couple of days to a week for the sync to finish._
 
 After you have everything up and running you can now access ThunderHub by going in BTCPay to Server Settings and then into Services. You will find ThunderHub in the Other Services section.
 
