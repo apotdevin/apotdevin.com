@@ -12,6 +12,7 @@ import { PostDate } from '../../src/components/blog/postDate';
 import { Navigation } from '../../src/components/navigation';
 import { BlogContact } from '../../src/components/blogContact';
 import { Meta } from '../../src/components/meta';
+import { PostLink } from '../../src/components/blog/postLink';
 
 export default function Post({ post, previous, next }) {
   const router = useRouter();
@@ -41,8 +42,10 @@ export default function Post({ post, previous, next }) {
           source={post.content}
           renderers={{
             code: CodeBlock,
+            inlineCode: CodeBlock,
             paragraph: PostParagraph,
             image: PostImage,
+            link: PostLink,
           }}
         />
       </Section>

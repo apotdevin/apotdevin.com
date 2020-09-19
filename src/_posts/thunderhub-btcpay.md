@@ -7,11 +7,11 @@ update: '2020-09-18T05:35:07.322Z'
 isDraft: false
 ---
 
-The team over at BTCPay have made it extremely easy to deploy BTCPay to any cloud server or local machine in a matter of minutes. Thanks to their Docker deployment, with a few commands you can have a fully working Bitcoin full node with lightning functionality and a varied assortment of additional apps all tied together behind the great UI of BTCPay.
+The team over at [BTCPay](https://btcpayserver.org/) have made it extremely easy to deploy BTCPay to any cloud server or local machine in a matter of minutes. Thanks to their Docker deployment, with a few commands you can have a fully working Bitcoin full node with lightning functionality and a varied assortment of additional apps all tied together behind the great UI of BTCPay.
 
 ![BTCPay Home](/assets/blog/thunderhub-btcpay/1.png)
 
-To go along with this great tech stack, ThunderHub was also integrated into their deployment, allowing you to get a great UX for managing and monitoring your node without complications.
+To go along with this great tech stack, [ThunderHub](https://www.thunderhub.io/) was also integrated into their deployment, allowing you to get a great UX for managing and monitoring your node without complications.
 
 In this post we will cover the process of getting a BTCPay instance up and running from zero (on DigitalOcean) with ThunderHub integrated.
 
@@ -19,13 +19,13 @@ _If you already have BTCPay running somewhere feel free to skip the first two pa
 
 ## Starting a Server on DigitalOcean
 
-1. Create an account on DigitalOcean here. This link will give you two full months to run a BTCPay instance completely for free. It’s a referral link so if you last long enough I also get a commission back.
+1. Create an account on DigitalOcean [here](https://m.do.co/c/39d481f25597). This link will give you two full months to run a BTCPay instance completely for free. It’s a referral link so if you last long enough I also get a commission back.
 
 2. Click on the big green button on the top right to start the process of creating a Droplet (Cloud Server).
 
 3. Select Marketplace and look for Docker in the different options.
 
-4. Chose the Standard plan and select the \$10/month server. This is enough to run a pruned Bitcoin node with lightning.
+4. Chose the Standard plan and select the **10usd/month server**. This is enough to run a pruned Bitcoin node with lightning.
 
 5. For the data center and authentication chose whatever you prefer.
 
@@ -55,7 +55,7 @@ export BTCPAY_ENABLE_SSH=true
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-thunderhub;opt-save-storage-xs"
 ```
 
-Remember to change the BTCPAY_HOST parameter to your website domain. Since we are running a small \$10/month server we also need to add opt-save-storage-xs to the additional fragments or the server will run out of space. If you have your own machine and enough space for the full blockchain, this is not needed and you can leave it like this:
+Remember to change the `BTCPAY_HOST` parameter to your website domain. Since we are running a small \$10/month server we also need to add opt-save-storage-xs to the additional fragments or the server will run out of space. If you have your own machine and enough space for the full blockchain, this is not needed and you can leave it like this:
 
 ```bash
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-thunderhub"
