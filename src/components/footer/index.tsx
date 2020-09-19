@@ -15,7 +15,7 @@ const FooterStyle = styled.div`
   min-height: 160px;
 
   @media (${mediaWidths.mobile}) {
-    padding: 32px;
+    padding: 32px 8px;
     min-height: 320px;
   }
 `;

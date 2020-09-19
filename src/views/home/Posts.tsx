@@ -26,6 +26,7 @@ const StyledPost = styled.div`
 
   @media (${mediaWidths.mobile}) {
     margin: 16px 0;
+    width: 100%;
   }
 `;
 
@@ -34,11 +35,16 @@ const PostImage = styled.img`
   height: 120px;
   object-fit: cover;
   background-color: white;
+
+  @media (${mediaWidths.mobile}) {
+    height: 160px;
+  }
 `;
 
 const PostTitle = styled.div`
+  font-size: 20px;
   margin: 16px 0 8px;
-  font-weight: 700;
+  font-weight: 900;
 `;
 
 const PostDate = styled.div`
