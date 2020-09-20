@@ -14,11 +14,11 @@ export default function Index({ allPosts }) {
       <Meta
         title={'AP - Software Engineer and Bitcoin Enthusiast'}
         description={
-          'I am Anthony, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. Also I really like Bitcoin.'
+          'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. I also really like Bitcoin.'
         }
         ogTitle={'AP - Software Engineer and Bitcoin Enthusiast'}
         ogDescription={
-          'I am Anthony, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. Also I really like Bitcoin.'
+          'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. I also really like Bitcoin.'
         }
         ogImage={'/assets/home/Cover.png'}
       />

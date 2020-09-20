@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { Section } from '../section';
 import styled from 'styled-components';
-import { ChevronsLeft, ChevronsRight } from 'react-feather';
+import { ChevronsLeft, ChevronsRight, Home } from 'react-feather';
 
 type PostProps = {
   slug?: string;
@@ -17,12 +17,15 @@ type NavigationProps = {
 const NavigationRow = styled.div`
   display: flex;
   cursor: pointer;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Half = styled.div`
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 45%;
 
   :hover {
     font-weight: bold;
@@ -66,6 +69,9 @@ export const Navigation = ({ previous, next }: NavigationProps) => {
           ) : (
             <HalfRow />
           )}
+          <Link href={'/blog'}>
+            <Home size={16} />
+          </Link>
           {next.title ? (
             <Link href={`/blog/${next.slug}`}>
               <HalfRightRow>

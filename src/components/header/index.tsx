@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { Section } from '../section';
-import { headerBackColor, headerTextColor } from '../../styles/ThemeColors';
+import {
+  headerBackColor,
+  headerTextColor,
+  linkHoverColor,
+} from '../../styles/ThemeColors';
 import styled from 'styled-components';
 import { Sun, Moon } from 'react-feather';
 import { useSettingsState, useSettingsDispatch } from '../../context/Settings';
 import Link from 'next/link';
+import { StyledLink } from '../link';
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -36,6 +41,25 @@ const HeaderLink = styled.a`
   text-decoration: none;
 `;
 
+const LinkRow = styled.div`
+  display: flex;
+`;
+
+const HeaderSubLink = styled.div`
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+
+  :hover {
+    color: ${linkHoverColor};
+  }
+`;
+
+const VerticalLine = styled.div`
+  margin: 0 16px;
+`;
+
 export const Header = () => {
   const { theme } = useSettingsState();
   const dispatch = useSettingsDispatch();
@@ -56,19 +80,27 @@ export const Header = () => {
               <HeaderTitle>AP</HeaderTitle>
             </HeaderLink>
           </Link>
-          {theme === 'light' ? (
-            <HeaderIcon
-              onClick={() => dispatch({ type: 'changeTheme', theme: 'dark' })}
-            >
-              <Moon size={20} />
-            </HeaderIcon>
-          ) : (
-            <HeaderIcon
-              onClick={() => dispatch({ type: 'changeTheme', theme: 'light' })}
-            >
-              <Sun size={20} />
-            </HeaderIcon>
-          )}
+          <LinkRow>
+            <Link href={'/blog'}>
+              <HeaderSubLink>Blog</HeaderSubLink>
+            </Link>
+            <VerticalLine>|</VerticalLine>
+            {theme === 'light' ? (
+              <HeaderIcon
+                onClick={() => dispatch({ type: 'changeTheme', theme: 'dark' })}
+              >
+                <Moon size={20} />
+              </HeaderIcon>
+            ) : (
+              <HeaderIcon
+                onClick={() =>
+                  dispatch({ type: 'changeTheme', theme: 'light' })
+                }
+              >
+                <Sun size={20} />
+              </HeaderIcon>
+            )}
+          </LinkRow>
         </HeaderLine>
       </Section>
     </StyledHeader>
