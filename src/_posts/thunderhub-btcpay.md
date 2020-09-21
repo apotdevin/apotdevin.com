@@ -13,6 +13,8 @@ The team over at [BTCPay](https://btcpayserver.org/) have made it extremely easy
 
 To go along with this great tech stack, [ThunderHub](https://www.thunderhub.io/) was also integrated into their deployment, allowing you to get a great UX for managing and monitoring your node without complications.
 
+![BTCPay Home](/assets/blog/thunderhub-btcpay/0.png)
+
 In this post we will cover the process of getting a BTCPay instance up and running from zero (on DigitalOcean) with ThunderHub integrated.
 
 _If you already have BTCPay running somewhere feel free to skip the first two parts and go directly to the “Adding ThunderHub to an existing BTCPay” section._

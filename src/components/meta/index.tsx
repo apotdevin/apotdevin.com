@@ -8,6 +8,7 @@ type MetaProps = {
   ogTitle: string;
   ogDescription: string;
   ogImage: string;
+  isDraft?: boolean;
   //   twitterTitle: string;
   //   twitterDescription: string;
   //   twitterImage: string;
@@ -19,6 +20,7 @@ export const Meta: React.FC<MetaProps> = ({
   ogTitle,
   ogDescription,
   ogImage,
+  isDraft,
   //   twitterTitle,
   //   twitterDescription,
   //   twitterImage,
@@ -27,7 +29,11 @@ export const Meta: React.FC<MetaProps> = ({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="robots" content="index, follow" />
+      {isDraft ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <meta name="robots" content="index, follow" />
+      )}
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDescription} />
       <meta property="og:image" content={`${WEBSITE_URL}${ogImage}`} />

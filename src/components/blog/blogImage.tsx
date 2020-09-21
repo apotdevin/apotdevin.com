@@ -12,8 +12,13 @@ const AlignImageCenter = styled.div`
   }
 `;
 
-export const BlogImage = styled.img`
-  max-width: 100%;
+type BlogImageProps = {
+  withMargin: string;
+};
+
+export const BlogImage = styled.img<BlogImageProps>`
+  width: 100%;
+  margin: ${({ withMargin }) => withMargin || '32px 0 64px'};
 `;
 
 type PostImageProps = {
@@ -24,7 +29,7 @@ type PostImageProps = {
 export const PostImage = ({ alt, src }: PostImageProps) => {
   return (
     <AlignImageCenter>
-      <BlogImage alt={alt} src={src} />
+      <BlogImage alt={alt} src={src} withMargin={'0'} />
     </AlignImageCenter>
   );
 };

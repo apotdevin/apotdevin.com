@@ -32,7 +32,7 @@ We will now balance these channels with the use of ThunderHub. Beforehand we con
 
 ThunderHub automatically fetches all your channels and shows you how balanced they are along with a color indicator that gets greener the more balanced the channel is. You can see that all the channels are completely unbalanced right now with 2 having only local balance and 3 only remote balance.
 
-First you must choose the outgoing channel you want to balance. ThunderHub sorts them by how balanced they are in increasing order from 0 to 1. After selecting Bob’s channel we now have to choose the incoming channel. See how the channels are now sorted in decreasing order. This is because ideally, you want to pass funds from a < 0.5 balanced channel to a > 0.5 balanced channel.
+First you must choose the outgoing channel you want to balance. ThunderHub sorts them by how balanced they are in increasing order from -1 to 1, with 0 being a perfectly balanced channel. After selecting Bob’s channel we now have to choose the incoming channel. See how the channels are now sorted in decreasing order. This is because ideally, you want to pass funds from a < 0 balanced channel to a > 0 balanced channel.
 
 We choose Carol’s channel since it has the same amount but in the opposite direction as Bob’s channel.
 

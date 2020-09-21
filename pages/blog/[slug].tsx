@@ -13,6 +13,17 @@ import { Navigation } from '../../src/components/navigation';
 import { BlogContact } from '../../src/components/blogContact';
 import { Meta } from '../../src/components/meta';
 import { PostLink } from '../../src/components/blog/postLink';
+import styled from 'styled-components';
+
+const DraftWarning = styled.div`
+  width: 100%;
+  text-align: center;
+  border: 1px solid gold;
+  border-radius: 8px;
+  padding: 8px 0;
+  margin: 64px 0 32px;
+  font-weight: 900;
+`;
 
 export default function Post({ post, previous, next }) {
   const router = useRouter();
@@ -27,17 +38,27 @@ export default function Post({ post, previous, next }) {
         ogTitle={post.title}
         ogDescription={post.excerpt}
         ogImage={post.coverImage}
+        isDraft={post.isDraft}
       />
       <Spacer mobileAmount={'60px'} />
       <Navigation previous={previous} next={next} />
-      <Section sectionWidth={'800px'}>
+      <Section>
+        {post.isDraft && (
+          <DraftWarning>
+            This post is a draft! Please do not share.
+          </DraftWarning>
+        )}
         <PostTitle>{post.title}</PostTitle>
         <PostDate
           date={post.date}
           bottomMargin={post.update ? '4px' : undefined}
         />
         {post.update && <PostDate date={post.update} text={'Updated: '} />}
+      </Section>
+      <Section sectionWidth={'1000px'}>
         <BlogImage alt={post.title} src={post.coverImage} />
+      </Section>
+      <Section>
         <ReactMarkdown
           source={post.content}
           renderers={{
@@ -66,6 +87,7 @@ export async function getStaticProps({ params }) {
     'coverImage',
     'excerpt',
     'update',
+    'isDraft',
   ]);
 
   const posts = getAllPosts(['slug', 'title']);

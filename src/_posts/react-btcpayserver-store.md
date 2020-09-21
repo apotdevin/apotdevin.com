@@ -6,7 +6,7 @@ date: '2019-01-05T05:35:07.322Z'
 isDraft: false
 ---
 
-Cruising through twitter, I started to see different accounts that offered products/services for bitcoin; got curious of how they where processing these payments. Was it manual? Or did they have some sort of automation to easily handle this?
+Cruising through twitter, I started to see different accounts that offered products/services for bitcoin and got curious of how they where processing these payments. Was it manual? Or did they have some sort of automation to easily handle this?
 
 After asking around, I started to see that a lot of them just used the “send payment to this address and then send me the transaction Id” method. This implied that the buyer, first, had some basic knowledge of transactions and block-explorers and second, that they would have to make the transaction, go into a block-explorer, find the respective transaction Id and finally send it to the seller. All of this while hoping some bad actor wouldn’t be looking into the transactions and claim that transaction Id first and for himself.
 
@@ -88,6 +88,8 @@ Check out the store here!
 # React Frontend for our Sock Shop
 
 Now where does React fit in with all of this?
+
+![Sock Shop](/assets/blog/btcstore/0.png)
 
 First, the app works best as a physical point of sale, meaning the customer is at the store and has the app open, but it isn’t really useful if we want to have a website where anybody in the world can purchase from us. We can’t customize the shop, we can’t give it a custom URL, place our own icon or add a contact page for our customers!
 
