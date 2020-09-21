@@ -79,7 +79,7 @@ export const BlogContact = () => {
         <BlogFooterSide>
           <SingleLine>
             <FooterTitle>Anthony Potdevin</FooterTitle>
-            <div>Frontend Dev</div>
+            <div>Software Engineer</div>
           </SingleLine>
           <StyledLink href={'https://www.instagram.com/apotdevin/'}>
             <FollowLine>

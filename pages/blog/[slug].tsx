@@ -14,6 +14,7 @@ import { BlogContact } from '../../src/components/blogContact';
 import { Meta } from '../../src/components/meta';
 import { PostLink } from '../../src/components/blog/postLink';
 import styled from 'styled-components';
+import { PostHeading } from '../../src/components/blog/postHeading';
 
 const DraftWarning = styled.div`
   width: 100%;
@@ -67,6 +68,7 @@ export default function Post({ post, previous, next }) {
             paragraph: PostParagraph,
             image: PostImage,
             link: PostLink,
+            heading: PostHeading,
           }}
         />
       </Section>

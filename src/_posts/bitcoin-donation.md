@@ -3,7 +3,7 @@ title: 'How to start receiving Bitcoin donations'
 excerpt: 'If you are a content creator on the internet there will come the day when you want to receive donations from people that enjoy your work. With Bitcoin you can get donations easily from around the world.'
 coverImage: '/assets/blog/bitcoin-donation/cover.png'
 date: '2020-09-21T05:35:07.322Z'
-isDraft: true
+isDraft: false
 ---
 
 ## The Problem
@@ -103,7 +103,7 @@ BTCPay now shows you a list of addresses that you can use to verify this is the 
 
 ![BTCPay Server Store](/assets/blog/bitcoin-donation/11.png)
 
-After you have verified, click on **Confirm** and go to the **Apps** section. Create a new app here, give it any name you want, leave it as PointOfSale and select the store you just created previously.
+After you have verified, click on **Confirm** and go to the **Apps** section. Create a new app here, give it any name you want, leave it as PointOfSale and select the store you created previously.
 
 ![BTCPay Server Store](/assets/blog/bitcoin-donation/12.png)
 
