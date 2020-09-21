@@ -90,7 +90,7 @@ export async function getStaticProps({ params }) {
     'isDraft',
   ]);
 
-  const posts = getAllPosts(['slug', 'title']);
+  const posts = getAllPosts(['slug', 'title', 'isDraft', 'date']);
   let previous = {};
   let next = {};
 
