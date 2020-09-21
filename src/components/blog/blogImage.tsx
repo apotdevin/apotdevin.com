@@ -8,7 +8,8 @@ const AlignImageCenter = styled.div`
   margin: 60px 0;
 
   @media (${mediaWidths.mobile}) {
-    margin: 32px 0;
+    width: 100vw;
+    margin: 32px -16px 32px;
   }
 `;
 
@@ -18,6 +19,7 @@ type BlogImageProps = {
 
 export const BlogImage = styled.img<BlogImageProps>`
   width: 100%;
+  height: 100%;
   margin: ${({ withMargin }) => withMargin || '32px 0 64px'};
 `;
 
