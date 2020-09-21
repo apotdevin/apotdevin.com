@@ -117,4 +117,8 @@ And there you have it, a donation portal where the internets global audience can
 
 Now you can start receiving payments from anywhere in the world, with no commissions, without asking for permission and in a secure manner. BTCPay has many other features (Such as crowdfunding) so I really encourage you to go back, explore and test everything it has to offer.
 
+This post was inspired by a question from [@JackRhysider](https://twitter.com/JackRhysider/status/1307769862580654080?s=20) and thought it might help someone else as well.
+
+![Twitter Jack Rhysider Tweet](/assets/blog/bitcoin-donation/14.png)
+
 I hope you have enjoyed this tutorial and that it helps you join the Bitcoin revolution. If you have any questions or want to reach out, all my social links are down below 🤟
