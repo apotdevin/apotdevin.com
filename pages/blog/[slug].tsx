@@ -15,6 +15,7 @@ import { PostLink } from '../../src/components/blog/postLink';
 import styled from 'styled-components';
 import { PostHeading } from '../../src/components/blog/postHeading';
 import { mediaWidths } from '../../src/styles/ThemeColors';
+import { PostListItem } from '../../src/components/blog/list';
 
 const DraftWarning = styled.div`
   width: 100%;
@@ -81,6 +82,7 @@ export default function Post({ post, previous, next }) {
             image: PostImage,
             link: PostLink,
             heading: PostHeading,
+            listItem: PostListItem,
           }}
         />
       </Section>
