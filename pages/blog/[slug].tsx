@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import { CodeBlock } from '../../src/components/blog/codeBlock';
 import { Section } from '../../src/components/section';
 import { Spacer } from '../../src/components/spacer';
-import { PostParagraph } from '../../src/components/blog/paragraph';
 import { PostTitle } from '../../src/components/blog/postTitle';
 import { BlogImage, PostImage } from '../../src/components/blog/blogImage';
 import { PostDate } from '../../src/components/blog/postDate';
@@ -15,6 +14,7 @@ import { Meta } from '../../src/components/meta';
 import { PostLink } from '../../src/components/blog/postLink';
 import styled from 'styled-components';
 import { PostHeading } from '../../src/components/blog/postHeading';
+import { mediaWidths } from '../../src/styles/ThemeColors';
 
 const DraftWarning = styled.div`
   width: 100%;
@@ -26,13 +26,26 @@ const DraftWarning = styled.div`
   font-weight: 900;
 `;
 
+const StyledSlug = styled.div`
+  & p {
+    font-family: 'Inter', sans-serif;
+    line-height: 170%;
+    font-size: 20px;
+    margin-bottom: 32px;
+
+    @media (${mediaWidths.mobile}) {
+      line-height: 150%;
+    }
+  }
+`;
+
 export default function Post({ post, previous, next }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <>
+    <StyledSlug>
       <Meta
         title={post.title}
         description={post.excerpt}
@@ -65,7 +78,6 @@ export default function Post({ post, previous, next }) {
           renderers={{
             code: CodeBlock,
             inlineCode: CodeBlock,
-            paragraph: PostParagraph,
             image: PostImage,
             link: PostLink,
             heading: PostHeading,
@@ -74,7 +86,7 @@ export default function Post({ post, previous, next }) {
       </Section>
       <Navigation previous={previous} next={next} />
       <BlogContact />
-    </>
+    </StyledSlug>
   );
 }
 
