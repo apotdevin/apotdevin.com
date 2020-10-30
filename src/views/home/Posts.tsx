@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { SectionTitle, SmallHighlight } from '../../components/typography';
 import { format } from 'date-fns';
 import { mediaWidths } from '../../styles/ThemeColors';
+import Image from 'next/image';
 
 const PostsStyled = styled.div`
   display: flex;
@@ -30,7 +31,7 @@ const StyledPost = styled.div`
   }
 `;
 
-const PostImage = styled.img`
+const PostImage = styled(Image)`
   width: 100%;
   height: 120px;
   object-fit: cover;

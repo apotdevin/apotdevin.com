@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import { mediaWidths } from '../../styles/ThemeColors';
 import { Instagram, GitHub, Twitter } from 'react-feather';
 import { StyledLink } from '../link';
+import Image from 'next/image';
 
-const ProfilePicture = styled.img`
+const ProfilePicture = styled(Image)`
   border-radius: 50%;
   width: 140px;
   height: 140px;

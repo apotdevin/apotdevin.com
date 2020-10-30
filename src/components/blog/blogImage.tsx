@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { mediaWidths } from '../../styles/ThemeColors';
+import Image from 'next/image';
 
 const AlignImageCenter = styled.div`
   width: 100%;
@@ -17,7 +18,7 @@ type BlogImageProps = {
   withMargin: string;
 };
 
-export const BlogImage = styled.img<BlogImageProps>`
+export const BlogImage = styled(Image)<BlogImageProps>`
   width: 100%;
   height: 100%;
   margin: ${({ withMargin }) => withMargin || '32px 0 64px'};

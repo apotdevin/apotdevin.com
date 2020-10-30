@@ -8,6 +8,7 @@ import {
 } from '../../components/typography';
 import { StyledLink } from '../../components/link';
 import { mediaWidths } from '../../styles/ThemeColors';
+import Image from 'next/image';
 
 const ProjectsStyled = styled.div`
   display: flex;
@@ -26,7 +27,7 @@ const ProjectsRow = styled.div`
   }
 `;
 
-const StyledImage = styled.img`
+const StyledImage = styled(Image)`
   max-width: 320px;
   margin-left: 32px;
 

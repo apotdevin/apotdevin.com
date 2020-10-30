@@ -11,8 +11,8 @@ import {
 import styled from 'styled-components';
 import { format } from 'date-fns';
 import Link from 'next/link';
-import { Separation } from '../../src/components/separation';
 import { mediaWidths } from '../../src/styles/ThemeColors';
+import Image from 'next/image';
 
 const StyledPost = styled.div`
   margin: 32px 0;
@@ -25,7 +25,7 @@ const StyledPost = styled.div`
   }
 `;
 
-const StyledImage = styled.img`
+const StyledImage = styled(Image)`
   width: 240px;
   height: 160px;
   object-fit: cover;
