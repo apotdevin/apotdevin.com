@@ -39,7 +39,7 @@ To install BTCPay and ThunderHub on this new server you need to login to your se
 
 ```bash
 sudo su -
-mdkir btcpay
+mkdir btcpay
 cd btcpay
 git clone https://github.com/btcpayserver/btcpayserver-docker
 cd btcpayserver-docker
