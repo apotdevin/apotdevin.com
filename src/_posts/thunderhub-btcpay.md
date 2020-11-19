@@ -3,7 +3,7 @@ title: 'Setting up BTCPay with ThunderHub in 5 minutes'
 excerpt: 'BTCPay is one of the easiest ways to get your own Bitcoin and Lightning node running. Now with the ThunderHub integration you can quickly manage your nodes with a great UX.'
 coverImage: '/assets/blog/thunderhub-btcpay/cover.png'
 date: '2020-04-26T05:35:07.322Z'
-update: '2020-09-18T05:35:07.322Z'
+update: '2020-11-19T05:35:07.322Z'
 isDraft: false
 ---
 
@@ -27,7 +27,7 @@ _If you already have BTCPay running somewhere feel free to skip the first two pa
 
 3. Select Marketplace and look for Docker in the different options.
 
-4. Chose the Standard plan and select the **10usd/month server**. This is enough to run a pruned Bitcoin node with lightning.
+4. Choose any plan with at least 2GB of RAM (4GB is ideal). This is enough to run a pruned Bitcoin node with lightning. If you choose a plan with only 2GB you will need an extra configuration further on.
 
 5. For the data center and authentication chose whatever you prefer.
 
@@ -57,11 +57,23 @@ export BTCPAY_ENABLE_SSH=true
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-thunderhub;opt-save-storage-xs"
 ```
 
-Remember to change the `BTCPAY_HOST` parameter to your website domain. Since we are running a small \$10/month server we also need to add opt-save-storage-xs to the additional fragments or the server will run out of space. If you have your own machine and enough space for the full blockchain, this is not needed and you can leave it like this:
+Remember to change the `BTCPAY_HOST` parameter to your website domain.
+
+### Additional Fragments
+
+- Since we are running a server with a low amount of storage, we also need to add `opt-save-storage-xs` to the additional fragments or the server will run out of space. If you have your own machine and enough space for the full blockchain, this is not needed and you can leave it like this:
 
 ```bash
 export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-thunderhub"
 ```
+
+- If you choose a plan with less than 4GB of RAM you should also add `opt-save-memory` to decrease the load on your server. This will also increase the initial blockchain sync time. The additional fragments would then be like this:
+
+```bash
+export BTCPAYGEN_ADDITIONAL_FRAGMENTS="opt-add-thunderhub;opt-save-storage-xs;opt-save-memory"
+```
+
+### Run the Setup
 
 Finally run this command to start the installation. Don’t forget the dot at the beginning.
 
