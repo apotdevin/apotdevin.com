@@ -13,11 +13,11 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Meta
-        title={'AP - Software Engineer and Bitcoin Enthusiast'}
+        title={'Anthony Potdevin - Software Engineer and Bitcoin Enthusiast'}
         description={
           'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. I also really like Bitcoin.'
         }
-        ogTitle={'AP - Software Engineer and Bitcoin Enthusiast'}
+        ogTitle={'Anthony Potdevin - Software Engineer and Bitcoin Enthusiast'}
         ogDescription={
           'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. I also really like Bitcoin.'
         }
