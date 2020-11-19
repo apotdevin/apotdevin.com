@@ -23,7 +23,11 @@ export const StyledLink: React.FC<LinkProps> = ({ children, href, to }) => {
   if (!href && !to) return null;
 
   if (href) {
-    return <LinkStyled href={href}>{children}</LinkStyled>;
+    return (
+      <LinkStyled href={href} target={'_blank'}>
+        {children}
+      </LinkStyled>
+    );
   }
 
   const linkProps = {

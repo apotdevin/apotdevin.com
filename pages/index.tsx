@@ -7,6 +7,7 @@ import { Posts } from '../src/views/home/Posts';
 import { getAllPosts } from '../lib/api';
 import { Spacer } from '../src/components/spacer';
 import { Meta } from '../src/components/meta';
+import { Talks } from '../src/views/home/Talks';
 
 export default function Index({ allPosts }) {
   return (
@@ -32,6 +33,8 @@ export default function Index({ allPosts }) {
       <Bitcoin />
       <Spacer />
       <Posts posts={allPosts} />
+      <Spacer />
+      <Talks />
       <Spacer />
       <Contact />
       <Spacer />

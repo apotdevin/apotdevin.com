@@ -68,6 +68,11 @@ export const headerBackColor = theme('mode', {
   dark: themeColors.black,
 });
 
+export const talkBackColor = theme('mode', {
+  light: 'white',
+  dark: themeColors.black,
+});
+
 export const headerTextColor = theme('mode', {
   light: 'white',
   dark: 'white',
