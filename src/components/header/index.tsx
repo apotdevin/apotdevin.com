@@ -4,12 +4,18 @@ import {
   headerBackColor,
   headerTextColor,
   linkHoverColor,
+  textColor,
 } from '../../styles/ThemeColors';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Sun, Moon } from 'react-feather';
 import { useSettingsState, useSettingsDispatch } from '../../context/Settings';
 import Link from 'next/link';
-import { StyledLink } from '../link';
+import useWindowScroll from '../../hooks/useWindowScroll';
+import { useRouter } from 'next/router';
+
+type Props = {
+  scrolled: boolean;
+};
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -18,12 +24,21 @@ const StyledHeader = styled.div`
   z-index: 1;
 `;
 
-const HeaderLine = styled.div`
+const HeaderLine = styled.div<Props>`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
+  transition: all 0.5s;
+  color: white;
+
+  ${({ scrolled }) =>
+    !scrolled &&
+    css`
+      color: ${textColor};
+      padding: 40px 8px;
+    `}
 `;
 
 const HeaderIcon = styled.div`
@@ -49,7 +64,6 @@ const HeaderSubLink = styled.div`
   cursor: pointer;
   text-decoration: none;
   font-weight: 500;
-  color: white;
 
   :hover {
     color: ${linkHoverColor};
@@ -64,6 +78,11 @@ export const Header = () => {
   const { theme } = useSettingsState();
   const dispatch = useSettingsDispatch();
 
+  const { pathname } = useRouter();
+
+  const { y } = useWindowScroll();
+  const scrolled = y > 0 || pathname !== '/';
+
   React.useEffect(() => {
     const storageTheme = localStorage.getItem('theme') || 'light';
     if (storageTheme !== theme) {
@@ -73,8 +92,11 @@ export const Header = () => {
 
   return (
     <StyledHeader>
-      <Section backColor={headerBackColor} textColor={headerTextColor}>
-        <HeaderLine>
+      <Section
+        backColor={scrolled ? headerBackColor : 'undefined'}
+        textColor={headerTextColor}
+      >
+        <HeaderLine scrolled={scrolled}>
           <Link href={'/'}>
             <HeaderLink>
               <HeaderTitle>AP</HeaderTitle>
