@@ -6,15 +6,19 @@ import { Instagram, GitHub, Twitter } from 'react-feather';
 import { StyledLink } from '../link';
 import Image from 'next/image';
 
-const ProfilePicture = styled(Image)`
-  border-radius: 50%;
-  width: 140px;
+const ProfilePicture = styled.div`
+  position: relative;
+  min-width: 140px;
   height: 140px;
 
   @media (${mediaWidths.mobile}) {
-    width: 120px;
+    min-width: 120px;
     height: 120px;
     margin-bottom: 24px;
+  }
+
+  img {
+    border-radius: 50%;
   }
 `;
 
@@ -73,10 +77,14 @@ export const BlogContact = () => {
     <Section sectionWidth={'600px'}>
       <StyledSeparation />
       <BlogFooter>
-        <ProfilePicture
-          alt={'Anthony Potdevin Profile Picture'}
-          src={'/assets/home/Profile.png'}
-        />
+        <ProfilePicture>
+          <Image
+            alt={'Anthony Potdevin Profile Picture'}
+            src={'/assets/home/Profile.png'}
+            layout={'fill'}
+            objectFit={'cover'}
+          />
+        </ProfilePicture>
         <BlogFooterSide>
           <SingleLine>
             <FooterTitle>Anthony Potdevin</FooterTitle>

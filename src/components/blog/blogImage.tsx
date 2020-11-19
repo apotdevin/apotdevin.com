@@ -14,15 +14,29 @@ const AlignImageCenter = styled.div`
   }
 `;
 
-type BlogImageProps = {
-  withMargin: string;
-};
-
-export const BlogImage = styled(Image)<BlogImageProps>`
+const BlogImage = styled.div`
+  position: relative;
   width: 100%;
-  height: 100%;
-  margin: ${({ withMargin }) => withMargin || '32px 0 64px'};
+  height: 240px;
+  margin: 0;
+
+  @media (${mediaWidths.mobile}) {
+    height: 140px;
+  }
 `;
+
+const Cover = styled.div`
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 32px 0 64px;
+`;
+
+export const CoverImage = ({ alt, src }: PostImageProps) => (
+  <Cover>
+    <Image alt={alt} src={src} layout={'fill'} objectFit={'cover'} />
+  </Cover>
+);
 
 type PostImageProps = {
   alt: string;
@@ -32,7 +46,9 @@ type PostImageProps = {
 export const PostImage = ({ alt, src }: PostImageProps) => {
   return (
     <AlignImageCenter>
-      <BlogImage alt={alt} src={src} withMargin={'0'} />
+      <BlogImage>
+        <Image alt={alt} src={src} layout={'fill'} objectFit={'contain'} />
+      </BlogImage>
     </AlignImageCenter>
   );
 };

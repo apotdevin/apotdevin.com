@@ -27,14 +27,15 @@ const ProjectsRow = styled.div`
   }
 `;
 
-const StyledImage = styled(Image)`
-  max-width: 320px;
+const StyledImage = styled.div`
+  position: relative;
   margin-left: 32px;
+  height: 200px;
+  width: 100%;
 
   @media (${mediaWidths.mobile}) {
     margin-left: 0;
     margin-top: 8px;
-    max-width: 260px;
   }
 `;
 
@@ -67,10 +68,14 @@ export const Projects = () => {
               gives you a great UI to manage them both.
             </Paragraph>
           </div>
-          <StyledImage
-            alt={'ThunderHub Open Source Project'}
-            src={'/assets/home/ThunderHub.png'}
-          />
+          <StyledImage>
+            <Image
+              alt={'ThunderHub Open Source Project'}
+              src={'/assets/home/ThunderHub.png'}
+              layout={'fill'}
+              objectFit={'contain'}
+            />
+          </StyledImage>
         </ProjectsRow>
       </ProjectsStyled>
     </Section>

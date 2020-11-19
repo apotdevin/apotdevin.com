@@ -6,7 +6,7 @@ import { CodeBlock } from '../../src/components/blog/codeBlock';
 import { Section } from '../../src/components/section';
 import { Spacer } from '../../src/components/spacer';
 import { PostTitle } from '../../src/components/blog/postTitle';
-import { BlogImage, PostImage } from '../../src/components/blog/blogImage';
+import { CoverImage, PostImage } from '../../src/components/blog/blogImage';
 import { PostDate } from '../../src/components/blog/postDate';
 import { Navigation } from '../../src/components/navigation';
 import { BlogContact } from '../../src/components/blogContact';
@@ -70,8 +70,8 @@ export default function Post({ post, previous, next }) {
         />
         {post.update && <PostDate date={post.update} text={'Updated: '} />}
       </Section>
-      <Section sectionWidth={'1000px'}>
-        <BlogImage alt={post.title} src={post.coverImage} />
+      <Section sectionWidth={'1200px'}>
+        <CoverImage alt={post.title} src={post.coverImage} />
       </Section>
       <Section>
         <ReactMarkdown

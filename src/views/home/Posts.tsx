@@ -31,15 +31,10 @@ const StyledPost = styled.div`
   }
 `;
 
-const PostImage = styled(Image)`
+const PostImage = styled.div`
+  position: relative;
   width: 100%;
-  height: 120px;
-  object-fit: cover;
-  background-color: white;
-
-  @media (${mediaWidths.mobile}) {
-    height: 160px;
-  }
+  height: 160px;
 `;
 
 const PostTitle = styled.div`
@@ -78,7 +73,14 @@ export const Posts = ({ posts }: PostsProps) => {
   const renderPost = (post: PostProps) => (
     <Link href={`/blog/${post.slug}`}>
       <StyledPost>
-        <PostImage alt={post.title} src={post.coverImage} />
+        <PostImage>
+          <Image
+            alt={post.title}
+            src={post.coverImage}
+            layout={'fill'}
+            objectFit={'cover'}
+          />
+        </PostImage>
         <PostTitle>{post.title}</PostTitle>
         <PostDate>{format(new Date(post.date), 'MMMM dd, yyyy')}</PostDate>
         <PostExcerpt>{post.excerpt}</PostExcerpt>

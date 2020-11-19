@@ -18,6 +18,7 @@ const StyledPost = styled.div`
   margin: 32px 0;
   display: flex;
   width: 100%;
+  min-height: 200px;
   cursor: pointer;
 
   @media (${mediaWidths.mobile}) {
@@ -25,15 +26,15 @@ const StyledPost = styled.div`
   }
 `;
 
-const StyledImage = styled(Image)`
-  width: 240px;
-  height: 160px;
-  object-fit: cover;
-  background-color: white;
+const StyledImage = styled.div`
+  position: relative;
+  min-width: 240px;
   margin-right: 16px;
 
   @media (${mediaWidths.mobile}) {
+    margin-right: 0;
     width: 100%;
+    height: 160px;
   }
 `;
 
@@ -57,7 +58,9 @@ export default function Index({ allPosts }) {
     return (
       <Link href={`/blog/${post.slug}`}>
         <StyledPost>
-          <StyledImage src={post.coverImage} />
+          <StyledImage>
+            <Image src={post.coverImage} layout={'fill'} objectFit={'cover'} />
+          </StyledImage>
           <div>
             <StyledTitle>{post.title}</StyledTitle>
             <StyledDate>
