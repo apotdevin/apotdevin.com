@@ -12,17 +12,7 @@ import { Talks } from '../src/views/home/Talks';
 export default function Index({ allPosts }) {
   return (
     <>
-      <Meta
-        title={'Anthony Potdevin - Software Engineer and Bitcoin Enthusiast'}
-        description={
-          'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. I also really like Bitcoin.'
-        }
-        ogTitle={'Anthony Potdevin - Software Engineer and Bitcoin Enthusiast'}
-        ogDescription={
-          'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. I also really like Bitcoin.'
-        }
-        ogImage={'/assets/home/Cover.png'}
-      />
+      <Meta ogImage={'/assets/home/Cover.png'} />
       <Spacer amount={'140px'} mobileAmount={'100px'} />
       <Top />
       <Spacer amount={'80px'} mobileAmount={'60px'} />

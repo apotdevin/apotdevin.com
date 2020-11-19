@@ -107,6 +107,10 @@ export const Header = () => {
               <HeaderSubLink>Blog</HeaderSubLink>
             </Link>
             <VerticalLine>|</VerticalLine>
+            <Link href={'/info'}>
+              <HeaderSubLink>Info</HeaderSubLink>
+            </Link>
+            <VerticalLine>|</VerticalLine>
             {theme === 'light' ? (
               <HeaderIcon
                 onClick={() => dispatch({ type: 'changeTheme', theme: 'dark' })}

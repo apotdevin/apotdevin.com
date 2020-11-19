@@ -77,13 +77,7 @@ export default function Index({ allPosts }) {
     <>
       <Meta
         title={'Blog | Anthony Potdevin'}
-        description={
-          'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. Also I really like Bitcoin.'
-        }
         ogTitle={'Blog | Anthony Potdevin'}
-        ogDescription={
-          'I am Anthony Potdevin, a professional software engineer focused on using the most up-to-date tech stack to bring the most value to projects. Also I really like Bitcoin.'
-        }
         ogImage={'/assets/home/Cover.png'}
       />
       <Spacer mobileAmount={'48px'} />
