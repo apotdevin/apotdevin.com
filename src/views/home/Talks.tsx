@@ -30,6 +30,7 @@ const Talk = {
 
     @media (${mediaWidths.mobile}) {
       flex-direction: column-reverse;
+      padding: 16px;
     }
 
     &:hover {
@@ -42,6 +43,10 @@ const Talk = {
     flex-direction: column;
     align-items: flex-start;
     max-width: 50%;
+
+    @media (${mediaWidths.mobile}) {
+      max-width: 100%;
+    }
   `,
   text: styled.div`
     line-height: 170%;

@@ -13,7 +13,7 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Meta ogImage={'/assets/home/Cover.png'} />
-      <Spacer amount={'140px'} mobileAmount={'100px'} />
+      <Spacer amount={'140px'} mobileAmount={'130px'} />
       <Top />
       <Spacer amount={'80px'} mobileAmount={'60px'} />
       <Tech />
