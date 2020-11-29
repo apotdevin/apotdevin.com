@@ -14,13 +14,17 @@ import { Meta } from '../../src/components/meta';
 import { PostLink } from '../../src/components/blog/postLink';
 import styled from 'styled-components';
 import { PostHeading } from '../../src/components/blog/postHeading';
-import { mediaWidths } from '../../src/styles/ThemeColors';
+import {
+  draftWarningBackground,
+  mediaWidths,
+} from '../../src/styles/ThemeColors';
 import { PostListItem } from '../../src/components/blog/list';
 
 const DraftWarning = styled.div`
   width: 100%;
   text-align: center;
-  border: 1px solid gold;
+  border: 1px solid rgb(255, 246, 0, 0.7);
+  background-color: ${draftWarningBackground};
   border-radius: 8px;
   padding: 8px 0;
   margin: 64px 0 32px;

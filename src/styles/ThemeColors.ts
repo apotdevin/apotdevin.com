@@ -112,3 +112,8 @@ export const contactCardColor = theme('mode', {
   light: themeColors.blue2,
   dark: '#ffd300',
 });
+
+export const draftWarningBackground = theme('mode', {
+  light: 'rgb(255, 246, 0, 0.7)',
+  dark: 'transparent',
+});
