@@ -9,23 +9,28 @@ type ActionType = {
   theme: string;
 };
 
+const availableThemes = ['light', 'dark'];
+const isValidTheme = (theme: string) => availableThemes.includes(theme);
+
 type Dispatch = (action: ActionType) => void;
 
 const StateContext = createContext<State | undefined>(undefined);
 const DispatchContext = createContext<Dispatch | undefined>(undefined);
 
 const initialState = {
-  theme: 'light',
+  theme: 'dark',
 };
 
 const stateReducer = (state: State, action: ActionType): State => {
   switch (action.type) {
-    case 'changeTheme':
-      localStorage.setItem('theme', action.theme);
-      return {
-        ...state,
-        theme: action.theme,
-      };
+    case 'changeTheme': {
+      let theme = 'dark';
+      if (isValidTheme(action.theme)) {
+        theme = action.theme;
+      }
+      localStorage.setItem('theme', theme);
+      return { ...state, theme };
+    }
     default:
       return initialState;
   }

@@ -84,7 +84,7 @@ export const Header = () => {
   const scrolled = y > 0 || pathname !== '/';
 
   React.useEffect(() => {
-    const storageTheme = localStorage.getItem('theme') || 'light';
+    const storageTheme = localStorage.getItem('theme') || 'dark';
     if (storageTheme !== theme) {
       dispatch({ type: 'changeTheme', theme: storageTheme });
     }
