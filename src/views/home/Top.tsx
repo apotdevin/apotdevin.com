@@ -30,7 +30,7 @@ export const Top = () => {
           living in Germany. I'm from Bogotá, Colombia, or how they like to call
           us back home: Un Rolo. I'm a recent joiner to the <b>React </b>
           community with 3 years as a professional React developer, and have
-          loved it ever since. I'm currently living in the beautifull city of
+          loved it ever since. I'm currently living in the beautiful city of
           Munich and work as a frontend dev at an e-commerce.
         </Paragraph>
         <Paragraph>
