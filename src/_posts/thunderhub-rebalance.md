@@ -6,13 +6,15 @@ date: '2021-01-24T05:35:07.322Z'
 isDraft: false
 ---
 
-### 1. Select the channels that will be rebalanced.
+### 1. Select the peers that will be rebalanced.
 
-Select an outgoing channel and an incoming channel.
+Select an outgoing peer and an incoming peer.
 
-- The outgoing channel should have a **higher local balance** than remote balance
-- The incoming channel should have a **higher remote balance** than local balance
-- For the incoming channel you can see the fees your partner will charge you. Check to see they aren't to high.
+- The outgoing peer should have a **higher local balance** than remote balance
+- The incoming peer should have a **higher remote balance** than local balance
+- For the incoming peer you can see the average fees your partner has for all channels he has with you. Check to see they aren't to high.
+
+Take into account that you are rebalancing through specific peers and not specific channels.
 
 ### 2. Select the fee to look out for.
 
