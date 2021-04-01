@@ -8,7 +8,7 @@ import { getAllPosts } from '../lib/api';
 import { Spacer } from '../src/components/spacer';
 import { Meta } from '../src/components/meta';
 import { Talks } from '../src/views/home/Talks';
-import { PGP } from '../src/views/home/pgp';
+import { PGP } from '../src/views/home/PGP';
 
 export default function Index({ allPosts }) {
   return (
