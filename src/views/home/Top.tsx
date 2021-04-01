@@ -26,16 +26,17 @@ export const Top = () => {
         </TopTitle>
         <Spacer />
         <Paragraph>
-          I'm a <b>Web Developer</b> with great interest in Bitcoin currently
-          living in Germany. I'm from Bogotá, Colombia, or how they like to call
-          us back home: Un Rolo. I'm a recent joiner to the <b>React </b>
-          community with 3 years as a professional React developer, and have
-          loved it ever since. I'm currently living in the beautiful city of
-          Munich and work as a frontend dev at an e-commerce.
+          I'm a <b>Web Developer</b> working on Bitcoin and the Lightning
+          Network currently living in the beautiful city of Munich, Germany{' '}
+          <Emoji label={'lightning'} symbol={'🇩🇪'} />. I'm from Bogotá, Colombia{' '}
+          <Emoji label={'lightning'} symbol={'🇨🇴'} />, or how they like to call
+          us back home: Un Rolo. I'm a professional React developer with a huge
+          passion for NodeJS and Typescript.
         </Paragraph>
         <Paragraph>
-          Apart from my full-time job, my focus is towards developing
-          applications on top of the <b>Lightning Network </b>
+          I specialize in creating user interfaces and developing applications
+          on top of the
+          <b> Lightning Network </b>
           <Emoji label={'lightning'} symbol={'⚡'} />, a second layer payment
           solution for Bitcoin. As an innovative new tech, I know this digital
           currency will <b>disrupt</b> the current financial sector at a global

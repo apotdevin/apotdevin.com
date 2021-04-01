@@ -8,6 +8,7 @@ import { getAllPosts } from '../lib/api';
 import { Spacer } from '../src/components/spacer';
 import { Meta } from '../src/components/meta';
 import { Talks } from '../src/views/home/Talks';
+import { PGP } from '../src/views/home/pgp';
 
 export default function Index({ allPosts }) {
   return (
@@ -15,6 +16,8 @@ export default function Index({ allPosts }) {
       <Meta ogImage={'/assets/home/Cover.png'} />
       <Spacer amount={'140px'} mobileAmount={'130px'} />
       <Top />
+      <Spacer amount={'80px'} mobileAmount={'60px'} />
+      <PGP />
       <Spacer amount={'80px'} mobileAmount={'60px'} />
       <Tech />
       <Spacer />

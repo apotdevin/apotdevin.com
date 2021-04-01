@@ -7,7 +7,7 @@ import {
 export const Paragraph = styled.div`
   font-size: 18px;
   max-width: 800px;
-  line-height: 150%;
+  line-height: 170%;
   margin-top: 16px;
 `;
 
