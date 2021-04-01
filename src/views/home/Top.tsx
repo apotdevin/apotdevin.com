@@ -31,7 +31,7 @@ export const Top = () => {
           <Emoji label={'lightning'} symbol={'🇩🇪'} />. I'm from Bogotá, Colombia{' '}
           <Emoji label={'lightning'} symbol={'🇨🇴'} />, or how they like to call
           us back home: Un Rolo. I'm a professional React developer with a huge
-          passion for NodeJS and Typescript.
+          passion for NodeJS and React.
         </Paragraph>
         <Paragraph>
           I specialize in creating user interfaces and developing applications
