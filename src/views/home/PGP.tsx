@@ -23,7 +23,7 @@ export const PGP = () => {
         </SectionTitle>
         <Paragraph>
           <StyledLink href={'/publicKey.txt'}>
-            7ac893d49d372db09d8497d571915301416d6e1d
+            3C8A 01A8 344B 66E7 875C E553 4403 F1DF BE77 9457
           </StyledLink>
         </Paragraph>
       </PGPStyled>
